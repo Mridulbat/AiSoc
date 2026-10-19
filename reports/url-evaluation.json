@@ -1,0 +1,151 @@
+{
+  "kind": "url",
+  "source_sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+  "seed": 42,
+  "split": "70/15/15 approximate, exact-host grouped; related parent domains may overlap; no webpage-derived features",
+  "cleaning": {
+    "invalid_rows": 4,
+    "duplicates_removed": 1106,
+    "conflicting_inputs_removed": 1
+  },
+  "sklearn": "1.6.1",
+  "threshold": 0.5,
+  "calibrated": false,
+  "partitions": {
+    "train": {
+      "count": 163945,
+      "class_distribution": {
+        "0": 94348,
+        "1": 69597
+      },
+      "metrics": {
+        "0": {
+          "precision": 0.9384148193136957,
+          "recall": 0.9825963454445246,
+          "f1-score": 0.9599975147304001,
+          "support": 94348.0
+        },
+        "1": {
+          "precision": 0.9747985572864707,
+          "recall": 0.9125824388982283,
+          "f1-score": 0.9426650439325576,
+          "support": 69597.0
+        },
+        "accuracy": 0.9528744395986459,
+        "macro avg": {
+          "precision": 0.9566066883000832,
+          "recall": 0.9475893921713765,
+          "f1-score": 0.9513312793314788,
+          "support": 163945.0
+        },
+        "weighted avg": {
+          "precision": 0.9538602370555678,
+          "recall": 0.9528744395986459,
+          "f1-score": 0.9526396326960749,
+          "support": 163945.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          92706,
+          1642
+        ],
+        [
+          6084,
+          63513
+        ]
+      ],
+      "membership_sha256": "965aa3a1a7b95485188cedf4d82e03e189a3000ef119615f21030944360a3149"
+    },
+    "validation": {
+      "count": 34994,
+      "class_distribution": {
+        "0": 20213,
+        "1": 14781
+      },
+      "metrics": {
+        "0": {
+          "precision": 0.9377949782895979,
+          "recall": 0.983030722802157,
+          "f1-score": 0.9598801961305282,
+          "support": 20213.0
+        },
+        "1": {
+          "precision": 0.9751557293930175,
+          "recall": 0.9108314728367499,
+          "f1-score": 0.9418966663168573,
+          "support": 14781.0
+        },
+        "accuracy": 0.9525347202377551,
+        "macro avg": {
+          "precision": 0.9564753538413078,
+          "recall": 0.9469310978194534,
+          "f1-score": 0.9508884312236927,
+          "support": 34994.0
+        },
+        "weighted avg": {
+          "precision": 0.9535756624657322,
+          "recall": 0.9525347202377551,
+          "f1-score": 0.95228419241058,
+          "support": 34994.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          19870,
+          343
+        ],
+        [
+          1318,
+          13463
+        ]
+      ],
+      "membership_sha256": "5962f43b74fb1f223843ae235218954cc86812ce9bb06475d4ddaa5da8b42803"
+    },
+    "test": {
+      "count": 35744,
+      "class_distribution": {
+        "0": 20288,
+        "1": 15456
+      },
+      "metrics": {
+        "0": {
+          "precision": 0.9398811769143719,
+          "recall": 0.9825019716088328,
+          "f1-score": 0.9607191054559475,
+          "support": 20288.0
+        },
+        "1": {
+          "precision": 0.9755778756191524,
+          "recall": 0.9175077639751553,
+          "f1-score": 0.9456521739130435,
+          "support": 15456.0
+        },
+        "accuracy": 0.9543979409131602,
+        "macro avg": {
+          "precision": 0.9577295262667622,
+          "recall": 0.9500048677919941,
+          "f1-score": 0.9531856396844955,
+          "support": 35744.0
+        },
+        "weighted avg": {
+          "precision": 0.9553167234447291,
+          "recall": 0.9543979409131602,
+          "f1-score": 0.954204040160314,
+          "support": 35744.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          19933,
+          355
+        ],
+        [
+          1275,
+          14181
+        ]
+      ],
+      "membership_sha256": "6b92bc154b09ec47c8fdf2fe42374ca60551826e2ba127668f46d4fc52f5f3df"
+    }
+  }
+}

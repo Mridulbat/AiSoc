@@ -1,0 +1,8 @@
+# Separate environment; source-verified candidate, full export/inference not validated on this host.
+executorch==1.5.1
+torch==2.14.0
+torchao==0.18.0
+optimum-executorch @ git+https://github.com/huggingface/optimum-executorch.git@44fa1d333f7fe0a4c120d894b8d55b14928af244
+transformers==5.0.0rc1
+# Optimum discovers all recipes, including Core ML, before selecting XNNPACK.
+coremltools==9.0

@@ -1,0 +1,10 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "architecture": "AMD64",
+  "runs": 30,
+  "median_ms": 21.339850005460903,
+  "p95_ms": 32.04099999857135,
+  "detector": "trained-classifier + rules",
+  "explainer": "template",
+  "scope": "warm local HTTP URL scan; excludes service startup; no Arm claim"
+}
