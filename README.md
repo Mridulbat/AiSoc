@@ -37,6 +37,8 @@ The committed evaluation reports were produced with scikit-learn 1.6.1. Reproduc
 
 See [DATASETS.md](docs/DATASETS.md), [MODEL_CARD.md](docs/MODEL_CARD.md), and [BENCHMARKING.md](docs/BENCHMARKING.md) before interpreting results.
 
+The current enhancement assessment and evaluation workflow are in [ENHANCEMENT_AUDIT.md](docs/ENHANCEMENT_AUDIT.md) and [EVALUATION.md](docs/EVALUATION.md).
+
 ## Llama + ExecuTorch
 
 This is a required competition path but needs separately approved Meta model access and a compatible dedicated runtime. Follow [EXECUTORCH.md](docs/EXECUTORCH.md), then run `python scripts/verify_llama.py`. Only its successful exit proves the real local generation path; the dashboard reports its exact readiness fields.

@@ -29,3 +29,11 @@ Next prerequisite: run and record the Arm benchmark on target hardware. Re-run `
 - DONE: A fresh FastAPI `/api/v1/analyze/sms` request with the same configured worker returned HTTP 200, `llama-executorch`, and all explainer readiness fields true.
 - DONE: Current checks: backend `pytest -q` = 42 passed (one upstream deprecation warning), Ruff check/format passed, frontend `npm test` = 3 passed, and `npm run build` passed.
 - BLOCKED: This Windows AMD64 verification is not Arm64 deployment or performance evidence; target hardware remains required for that claim.
+
+## Enhancement sprint, 2026-10-19
+
+- DONE: Audited the completed system in `docs/ENHANCEMENT_AUDIT.md`; avoided duplicate modules and documented genuine gaps.
+- DONE: Strengthened network CSV traceability with a versioned IsolationForest identity, explicit pre-aggregated-flow schema, mapped feature names, and a regression test. PCAP and labelled network classification remain intentionally unsupported rather than misrepresented.
+- DONE: Extended the benchmark command to reproducibly measure URL or SMS loopback analysis with separate input metadata; it still does not mislabel x86 results as Arm or model-generation performance.
+- DONE: Added separate CICIDS2017 and UNSW-NB15 labelled-flow evaluation support. Downloads remain manual and reports must be generated from the exact official CSV used.
+- DONE: Added the reproducible evaluation, offline exercise, and Arm evidence procedures. Current checks: 43 backend tests, Ruff, 3 frontend tests, and frontend production build all pass.

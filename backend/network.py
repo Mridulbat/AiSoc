@@ -4,6 +4,7 @@ import numpy as np
 from sklearn.ensemble import IsolationForest
 
 COLUMNS = ["duration", "bytes", "packets"]
+DETECTOR_VERSION = "isolation-forest-log1p-v1"
 
 
 def analyze_csv(raw, columns=None):
@@ -49,13 +50,20 @@ def analyze_csv(raw, columns=None):
                 row=i + 2,
                 anomaly=bool(score < 0),
                 score=float(score),
-                statistics=dict(zip(COLUMNS, values.tolist())),
-                largest_deviation=COLUMNS[int(np.argmax(deviation))],
+                statistics=dict(zip(columns, values.tolist())),
+                largest_deviation=columns[int(np.argmax(deviation))],
             )
         )
     return dict(
         rows=result,
         count=len(rows),
         anomalies=sum(r["anomaly"] for r in result),
+        detector=DETECTOR_VERSION,
+        input_schema={
+            "required_numeric_columns": columns,
+            "optional_metadata_columns": ["protocol", "source", "destination", "start_time"],
+            "pcap_support": False,
+            "limitations": "CSV rows are pre-aggregated flows. Protocol and endpoint metadata are not used by this detector.",
+        },
         semantics="IsolationForest decision function: negative means unusual relative to this uploaded batch, not confirmed malicious. Largest deviation is descriptive, not model attribution.",
     )

@@ -9,3 +9,7 @@ This document is a reproducible target procedure, not a completed hardware-valid
 5. Benchmark after successful model verification: `python scripts/benchmark.py --runs 30 > reports/benchmark-arm64.json`. Record device/OS, model/export, thermal state, runtime, and detector/explainer mode.
 
 Llama runs through ExecuTorch on the Arm CPU. No Hailo/NPU claim is made; the current URL/SMS models are scikit-learn CPU artifacts and network analysis is CPU-based. Validate responsiveness, memory pressure, thermals, and the exact exported operators before a demo.
+
+## Validation evidence checklist
+
+On the target device, save command output for: `uname -m`, `python --version`, `python scripts/verify_llama.py`, `python scripts/benchmark.py --runs 30`, and the API health response after one URL, SMS, and network CSV scan. Record model artifact hash, free RAM/disk, OS, ExecuTorch/torch versions, device temperature/thermal state, and whether the result mode is `llama-executorch`. Do not substitute an x86/GPU run for this evidence.

@@ -3,7 +3,7 @@ import { ShieldCheck, LayoutDashboard, Link, MessageSquare, Activity, Settings, 
 
 type Health = {status:string;detectors:Record<string,string>;explainer:Record<string,boolean|string|null>;history_enabled:boolean;offline:boolean};
 type Scan = {id:string;kind:string;risk:string;duration_ms:number};
-type Result = Scan & {score:number|null;score_semantics:string;detector:string;uncertainty:string;evidence:{code:string;detail:string}[];explanation:{mode:string;text:string;recommendations:string[]};network:null|{count:number;anomalies:number;semantics:string;rows:{row:number;anomaly:boolean;score:number;largest_deviation:string}[]}};
+type Result = Scan & {score:number|null;score_semantics:string;detector:string;uncertainty:string;evidence:{code:string;detail:string}[];explanation:{mode:string;text:string;recommendations:string[]};network:null|{count:number;anomalies:number;detector:string;semantics:string;input_schema:{limitations:string};rows:{row:number;anomaly:boolean;score:number;largest_deviation:string;statistics:Record<string,number>}[]}};
 const tabs = [{name:'Overview',icon:LayoutDashboard},{name:'URL scanner',icon:Link},{name:'Message scanner',icon:MessageSquare},{name:'Network analyser',icon:Activity},{name:'Settings',icon:Settings}];
 async function api<T>(path:string, options?:RequestInit):Promise<T>{
   const response=await fetch('/api/v1'+path,options);

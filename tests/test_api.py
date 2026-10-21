@@ -86,6 +86,25 @@ def test_network(client):
     assert response.status_code == 200
     data = response.json()["network"]
     assert data["count"] == 40 and data["rows"][-1]["anomaly"]
+    assert data["detector"] == "isolation-forest-log1p-v1"
+    assert data["input_schema"]["pcap_support"] is False
+
+
+def test_network_custom_column_mapping(client):
+    raw = b"seconds,total_bytes,total_packets\n" + b"\n".join(
+        f"{i},{i * 10},{i * 2}".encode() for i in range(1, 21)
+    )
+    data = client.post(
+        "/api/v1/analyze/network-csv",
+        data={"columns": '["seconds", "total_bytes", "total_packets"]'},
+        files={"file": ("flows.csv", raw)},
+    ).json()["network"]
+    assert set(data["rows"][0]["statistics"]) == {"seconds", "total_bytes", "total_packets"}
+    assert data["input_schema"]["required_numeric_columns"] == [
+        "seconds",
+        "total_bytes",
+        "total_packets",
+    ]
 
 
 @pytest.mark.parametrize(
