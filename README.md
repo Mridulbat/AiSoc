@@ -35,9 +35,7 @@ The committed evaluation reports were produced with scikit-learn 1.6.1. Reproduc
 .\.venv\Scripts\python scripts/train.py url --data data/PhiUSIIL_Phishing_URL_Dataset.csv
 ```
 
-See [DATASETS.md](docs/DATASETS.md), [MODEL_CARD.md](docs/MODEL_CARD.md), and [BENCHMARKING.md](docs/BENCHMARKING.md) before interpreting results.
-
-The current enhancement assessment and evaluation workflow are in [ENHANCEMENT_AUDIT.md](docs/ENHANCEMENT_AUDIT.md) and [EVALUATION.md](docs/EVALUATION.md).
+See [DATASETS.md](docs/DATASETS.md), [MODEL_CARD.md](docs/MODEL_CARD.md), [BENCHMARKING.md](docs/BENCHMARKING.md), and [EVALUATION.md](docs/EVALUATION.md) before interpreting results.
 
 ## Llama + ExecuTorch
 
@@ -50,8 +48,4 @@ This is a required competition path but needs separately approved Meta model acc
 - [Threat model](docs/THREAT_MODEL.md)
 - [Arm64 deployment](docs/ARM64_DEPLOYMENT.md)
 - [Technical report](docs/TECHNICAL_REPORT.md)
-- [Demo script](docs/DEMO_SCRIPT.md)
 
-## Current evidence and limits
-
-Backend tests, frontend tests, build, lint, and strict local Llama generation verification were run on Windows AMD64. `reports/benchmark-windows.json` records a 30-run warm URL-scan benchmark with the template explainer. It is not an Arm or Llama performance benchmark. See [PLAN.md](PLAN.md) for the complete verified status and blockers.

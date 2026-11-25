@@ -12,3 +12,4 @@ models/
 *.pte
 *.safetensors
 *.joblib
+*.tsbuildinfo

@@ -10,4 +10,4 @@ Avoid sharing the working directory when it contains downloaded datasets or priv
 
 ## Offline exercise
 
-After completing setup, disconnect the machine from the network, start the service, and run the URL, SMS, and network CSV demonstrations in `DEMO_SCRIPT.md`. With a configured local export, also run `scripts/verify_llama.py`. All four paths must work without a connection; setup/download commands are deliberately separate and require internet.
+After completing setup, disconnect the machine from the network, start the service, and run the URL, SMS, and network CSV scans. With a configured local export, also run `scripts/verify_llama.py`. All four paths must work without a connection; setup/download commands are deliberately separate and require internet.
